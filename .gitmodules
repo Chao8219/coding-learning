@@ -1,0 +1,9 @@
+[submodule "py-starter"]
+	path = py-starter
+	url = git@github.com:Chao8219/py-starter.git
+[submodule "doxygen-example"]
+	path = doxygen-example
+	url = git@github.com:Chao8219/doxygen-example.git
+[submodule "cpp-example"]
+	path = cpp-example
+	url = git@github.com:Chao8219/cpp-example.git
