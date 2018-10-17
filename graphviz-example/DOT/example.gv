@@ -1,0 +1,54 @@
+digraph{
+    graph[label = "This is an example for graphviz", nodesep = 0.4]
+    node[shape = "box", style = rounded]
+        Start2; Start1; end;
+    node[shape = "box", style = ""]
+        actionA; actionB; actionC; actionD;
+        actionE; actionF; actionG; actionH;
+    node[shape = diamond, style = ""]
+        ifStatement1; ifStatement2;
+    node[shape = "box", style = ""]
+        emptyStart1; emptyStart2;
+    
+    emptyStart1[label = "                               ", style = invis];
+    emptyStart2[label = "                               ", style = invis];
+
+    {rank = same;
+        emptyStart2 -> Start1 -> emptyStart1 -> Start2[style = invis];
+        rankdir = LR;
+    }
+
+    subgraph master{
+        Start1 -> actionA -> actionB -> actionD -> actionE -> actionF -> ifStatement1;
+        ifStatement1 -> actionG[label = "no"];
+        ifStatement1 -> ifStatement2[label = "yes"];
+    }
+  
+    subgraph branch1{
+        emptyStart1 -> actionG[style = invis];
+        actionG -> actionF[weight = 0];
+    }
+  
+    subgraph branch2{
+        emptyStart2 -> actionH[style = invis];
+        actionH -> actionE[weight = 0];
+        ifStatement2 -> actionH[weight = 0, label = "no"];
+    }
+  
+    Start2[label = "Parallel Start"]
+    Start1[label = "Master Start"]
+    actionA[label = "excute \nactionA"]
+    actionB[label = "excute \nactionB"]
+    actionD[label = "excute \nactionD"]
+    actionE[label = "excute \nactionE"]
+    actionF[label = "excute \nactionF"]
+    ifStatement1[label = "if the coffee \ntastes good?"]
+    actionG[label = "excute actionG: \nback to actionF"]
+    ifStatement2[label = "if the muffin \ntastes good?"]
+    actionH[label = "excute actionH: \nback to actionE"]
+
+    // rank the same means they are parallel horizontally.
+    {rank = same; emptyStart2  Start1 emptyStart1  Start2}
+    {rank = same; ifStatement1 actionG}
+    {rank = same; actionH ifStatement2}
+}

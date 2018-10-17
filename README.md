@@ -28,6 +28,10 @@ This repo is for coding-learning for beginners. Please feel free to contact me t
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[6.5 Submodule](#65-submodule)
 
+&nbsp;&nbsp;[7 Graphviz](#7-graphviz)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[7.1 DOT Language](#71-dot-language)
+
 # 1 CPP
 
 ## 1.1 GCC and Make
@@ -236,5 +240,25 @@ The details could be found [here](https://help.github.com/articles/generating-a-
 ## 6.5 Submodule
 
 If you want to use other repo to be a part of your project, you may want to use submodule of git. The details will be filled in later. For now, you can go [here](http://www.vogella.com/tutorials/GitSubmodules/article.html) to see how you can use it.
+
+[Back to top](#contents)
+
+# 7 Graphviz
+
+The graphviz is a powerful tool to plot diagrams from source code. You can use different engines to generate diagrams as pics or pdf in graphviz.
+
+The installation is simple and strightforward: go to [download](https://graphviz.gitlab.io/download/), find your OS and do as they said.
+
+## 7.1 DOT Language
+
+DOT language is simple. You could go [here](http://melp.nl/2013/08/flow-charts-in-code-enter-graphviz-and-the-dot-language/) to find a easy-handy example to plot flowchart.
+
+As is written in the example, you can use any editor to write down the code, and generate the format you want by command in terminal: `dot -Tpng -o example.png example.gv`
+
+[Back to top](#contents)
+
+## 7.2 Python
+
+You can also use python to generate dot file. See [here](https://pypi.org/project/graphviz/) to see how to use it.
 
 [Back to top](#contents)
