@@ -32,6 +32,8 @@ This repo is for coding-learning for beginners. Please feel free to contact me t
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[7.1 DOT Language](#71-dot-language)
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[7.2 Python](#72-python)
+
 # 1 CPP
 
 ## 1.1 GCC and Make
@@ -244,6 +246,8 @@ If you want to use other repo to be a part of your project, you may want to use 
 [Back to top](#contents)
 
 # 7 Graphviz
+
+![Tested Python Version](https://img.shields.io/badge/python-3.6-blue.svg)
 
 The graphviz is a powerful tool to plot diagrams from source code. You can use different engines to generate diagrams as pics or pdf in graphviz.
 
