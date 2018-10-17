@@ -261,4 +261,6 @@ As is written in the example, you can use any editor to write down the code, and
 
 You can also use python to generate dot file. See [here](https://pypi.org/project/graphviz/) to see how to use it.
 
+You may need to use anaconda to run the script.
+
 [Back to top](#contents)
