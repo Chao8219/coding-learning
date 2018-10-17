@@ -1,5 +1,7 @@
 # Coding Learning Repo
 
+![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)
+
 This repo is for coding-learning for beginners. Please feel free to contact me to work this together.
 
 # Contents
@@ -12,7 +14,13 @@ This repo is for coding-learning for beginners. Please feel free to contact me t
 
 &nbsp;&nbsp;[3 Doxygen](#3-doxygen)
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3.1 Normal Use of Doxygen Steps](#31-normal-use-of-doxygen-steps)
+
 &nbsp;&nbsp;[4 Ubuntu Tips](#4-ubuntu-tips)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[4.1 Ubuntu 101](#41-ubuntu-101)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[4.2 Set Terminal Tab Name](#42-set-terminal-tab-name)
 
 &nbsp;&nbsp;[5 General Tips](#5-general-tips)
 
@@ -66,7 +74,7 @@ See python tips in submodule **py-starter**. (for now)
 
 # 3 Doxygen
 
-## 3.1 Normal Use of Doxygen Steps:
+## 3.1 Normal Use of Doxygen Steps
 
 1. Install Doxygen ( Personal opinion, do not use GUI version ).
 2. Go to your repo directory.
@@ -145,6 +153,12 @@ Also, github supports some unique markdown feature, such as:
 1. [sololearn](https://www.sololearn.com/).
         You can have all types of code to learn. 
 2. [cplusplus.com](http://www.cplusplus.com/doc/tutorial/) 
+
+[Back to top](#contents)
+
+## 5.6 Fancy Badge
+
+Do you want to have some fancy badges in your README, like this ![Mozilla Add-on](https://img.shields.io/amo/stars/dustman.svg) ? Check [shields.io](https://shields.io/) to get your own badge!
 
 [Back to top](#contents)
 
