@@ -1,4 +1,4 @@
-# Code Learning Repo
+# Coding Learning Repo
 
 This repo is for testing and learning all kinds code and software I may need.
 
