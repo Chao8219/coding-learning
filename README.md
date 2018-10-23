@@ -64,13 +64,13 @@ where:
 - `./hello` runs the executable.
 - also, if you use `g++ hello.cpp`, you will get a `a.out` as an execuable.
 
-[Back to top](#contents)
+[Back to Top](#contents)
 
 # 2 Python
 
 See python tips in submodule **py-starter**. (for now)
 
-[Back to top](#contents)
+[Back to Top](#contents)
 
 # 3 Doxygen
 
@@ -83,7 +83,7 @@ See python tips in submodule **py-starter**. (for now)
 5. Modify the comment in your code so that it could be seen by doxygen.
 6. Use `doxygen Doxygen` to run the building process.
 
-[Back to top](#contents)
+[Back to Top](#contents)
 
 # 4 Ubuntu Tips
 
@@ -113,7 +113,7 @@ PS1=${ORIG}${TITLE}
 
 Then you can use the function **set-title** to set title up.
 
-[Back to top](#contents)
+[Back to Top](#contents)
 
 # 5 General Tips
 
@@ -154,13 +154,13 @@ Also, github supports some unique markdown feature, such as:
         You can have all types of code to learn. 
 2. [cplusplus.com](http://www.cplusplus.com/doc/tutorial/) 
 
-[Back to top](#contents)
+[Back to Top](#contents)
 
 ## 5.6 Fancy Badge
 
 Do you want to have some fancy badges in your README, like this ![Mozilla Add-on](https://img.shields.io/amo/stars/dustman.svg) ? Check [shields.io](https://shields.io/) to get your own badge!
 
-[Back to top](#contents)
+[Back to Top](#contents)
 
 # 6 Git
 
@@ -257,7 +257,7 @@ The details could be found [here](https://help.github.com/articles/generating-a-
 
 If you want to use other repo to be a part of your project, you may want to use submodule of git. The details will be filled in later. For now, you can go [here](http://www.vogella.com/tutorials/GitSubmodules/article.html) to see how you can use it.
 
-[Back to top](#contents)
+[Back to Top](#contents)
 
 # 7 Graphviz
 
@@ -273,7 +273,7 @@ DOT language is simple. You could go [here](http://melp.nl/2013/08/flow-charts-i
 
 As is written in the example, you can use any editor to write down the code, and generate the format you want by command in terminal: `dot -Tpng -o example.png example.gv`
 
-[Back to top](#contents)
+[Back to Top](#contents)
 
 ## 7.2 Python
 
@@ -281,4 +281,4 @@ You can also use python to generate dot file. See [here](https://pypi.org/projec
 
 You may need to use anaconda to run the script.
 
-[Back to top](#contents)
+[Back to Top](#contents)
