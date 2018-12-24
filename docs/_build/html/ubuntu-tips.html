@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Search &mdash; coding-learning  documentation</title>
+  <title>4 Ubuntu Tips &mdash; coding-learning  documentation</title>
   
 
   
@@ -27,7 +27,9 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="general-tips.html" />
+    <link rel="prev" title="3 Doxygen" href="doxygen.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -59,7 +61,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -77,14 +79,15 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="cpp.html">1 CPP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python.html">2 Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="doxygen.html">3 Doxygen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ubuntu-tips.html">4 Ubuntu Tips</a></li>
-<li class="toctree-l1"><a class="reference internal" href="general-tips.html">5 General Tips</a></li>
-<li class="toctree-l1"><a class="reference internal" href="git.html">6 Git</a></li>
-<li class="toctree-l1"><a class="reference internal" href="graphviz.html">7 Graphviz</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4 Ubuntu Tips</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ubuntu-101">4.1 Ubuntu 101</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#set-terminal-tab-name">4.2 Set Terminal Tab Name</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -130,12 +133,14 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Search</li>
+      <li>4 Ubuntu Tips</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
+            <a href="_sources/ubuntu-tips.rst.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
     
@@ -147,24 +152,60 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <noscript>
-  <div id="fallback" class="admonition warning">
-    <p class="last">
-      Please activate JavaScript to enable the search
-      functionality.
-    </p>
-  </div>
-  </noscript>
+  <div class="section" id="ubuntu-tips">
+<h1>4 Ubuntu Tips<a class="headerlink" href="#ubuntu-tips" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="ubuntu-101">
+<h2>4.1 Ubuntu 101<a class="headerlink" href="#ubuntu-101" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">Use <strong>Ctrl+Alt+T</strong> to open terminal.</p>
+</li>
+<li><p class="first">In terminal, use <strong>Ctrl+Shift+T</strong> to open a new tab.</p>
+</li>
+<li><p class="first">Use <strong>Ctrl+D</strong> to close terminal window.</p>
+</li>
+<li><p class="first">Use <strong>cd</strong> to change directory.</p>
+</li>
+<li><p class="first">Use <strong>ls</strong> to check list</p>
+</li>
+<li><p class="first">Use <strong>gedit ~/.bashrc</strong> to open the file that will automatically run
+the moment you open a new terminal.
+- Additionally, if you are using OS X, you can use <a href="#id1"><span class="problematic" id="id2">**</span></a>open -e</p>
+<blockquote>
+<div><p>[file name]** to open the file.</p>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="set-terminal-tab-name">
+<h2>4.2 Set Terminal Tab Name<a class="headerlink" href="#set-terminal-tab-name" title="Permalink to this headline">¶</a></h2>
+<p>Use <strong>gedit ~/.bashrc</strong> to open .bashrc file. Add script as follow:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>function set-title(){
+if [[ -z &quot;$ORIG&quot; ]]; then
+ORIG=$PS1
+fi
+TITLE=&quot;\[\e]2;$*\a\]&quot;
+PS1=${ORIG}${TITLE}
+}
+</pre></div>
+</div>
+<p>Then you can use the function <strong>set-title</strong> to set title up.</p>
+</div>
+</div>
 
-  
-  <div id="search-results">
-  
-  </div>
 
            </div>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="general-tips.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="doxygen.html" class="btn btn-neutral" title="3 Doxygen" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -196,7 +237,6 @@
         <script type="text/javascript" src="_static/jquery.js"></script>
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/searchtools.js"></script>
     
 
   
@@ -207,14 +247,7 @@
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
-   
-
+  </script> 
 
 </body>
 </html>

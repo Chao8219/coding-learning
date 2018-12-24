@@ -14,6 +14,12 @@ contact me to work this together.
    :caption: Contents:
 
    cpp
+   python
+   doxygen
+   ubuntu-tips
+   general-tips
+   git
+   graphviz
 
 
 
