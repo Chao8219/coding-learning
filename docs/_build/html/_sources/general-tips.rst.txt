@@ -18,8 +18,8 @@
 5.2 Choose License
 ==================
 
-You can select a type of license for your project `here <https://
-choosealicense.com/>`_.
+You can select a type of license for your project here: `choose a 
+license <https://choosealicense.com/>`_.
 
 In this repo, you can see MIT License.
 
@@ -30,9 +30,9 @@ A logo is not really necessary for your project, but you can always use
 few minutes to design one simple logo that based on exist template.
 
 You can use different webside to do so. In this repo, you can see logo 
-designed from `here <https://www.wix.com/logo/maker>`_. Obviously, high 
-resolution logo is expensive, however the low res one, which is good 
-enough for us, is always free to get.
+designed from here: `wix logo desin <https://www.wix.com/logo/maker>`_. 
+Obviously, high resolution logo is expensive, however the low res one, 
+which is good enough for us, is always free to get.
 
 5.4 Markdown
 ============

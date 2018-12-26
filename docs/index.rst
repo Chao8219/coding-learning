@@ -20,7 +20,8 @@ contact me to work this together.
    general-tips
    git
    graphviz
-
+   using-conda-environment
+   documentation-by-sphinx
 
 
 Indices and tables
