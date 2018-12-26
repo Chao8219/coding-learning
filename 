@@ -1,0 +1,377 @@
+[1mdiff --git a/README.md b/README.md[m
+[1mdeleted file mode 100644[m
+[1mindex 455fe85..0000000[m
+[1m--- a/README.md[m
+[1m+++ /dev/null[m
+[36m@@ -1,284 +0,0 @@[m
+[31m-# Coding Learning Repo[m
+[31m-[m
+[31m-![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)[m
+[31m-[m
+[31m-This repo is for coding-learning for beginners. Please feel free to contact me to work this together.[m
+[31m-[m
+[31m-# Contents[m
+[31m-[m
+[31m-&nbsp;&nbsp;[1 CPP](#1-cpp)[m
+[31m-[m
+[31m-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1.1 GCC and Make](#11-gcc-and-make)[m
+[31m-[m
+[31m-&nbsp;&nbsp;[2 Python](#2-python)[m
+[31m-[m
+[31m-&nbsp;&nbsp;[3 Doxygen](#3-doxygen)[m
+[31m-[m
+[31m-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3.1 Normal Use of Doxygen Steps](#31-normal-use-of-doxygen-steps)[m
+[31m-[m
+[31m-&nbsp;&nbsp;[4 Ubuntu Tips](#4-ubuntu-tips)[m
+[31m-[m
+[31m-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[4.1 Ubuntu 101](#41-ubuntu-101)[m
+[31m-[m
+[31m-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[4.2 Set Terminal Tab Name](#42-set-terminal-tab-name)[m
+[31m-[m
+[31m-&nbsp;&nbsp;[5 General Tips](#5-general-tips)[m
+[31m-[m
+[31m-&nbsp;&nbsp;[6 Git](#6-git)[m
+[31m-[m
+[31m-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[6.1 Git and GitHub](#61-git-and-github)[m
+[31m-[m
+[31m-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[6.2 Use Git on Windows](#62-use-git-on-windows)[m
+[31m-[m
+[31m-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[6.3 Basic Git Command](#63-basic-git-command)[m
+[31m-[m
+[31m-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[6.4 Use SSH](#64-use-ssh)[m
+[31m-[m
+[31m-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[6.5 Submodule](#65-submodule)[m
+[31m-[m
+[31m-&nbsp;&nbsp;[7 Graphviz](#7-graphviz)[m
+[31m-[m
+[31m-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[7.1 DOT Language](#71-dot-language)[m
+[31m-[m
+[31m-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[7.2 Python](#72-python)[m
+[31m-[m
+[31m-# 1 CPP[m
+[31m-[m
+[31m-## 1.1 GCC and Make[m
+[31m-[m
+[31m-To learn C++, one could look around GCC (GNU C Compiler) first.[m
+[31m-[m
+[31m-The tutorial could be seen [here](https://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html)[m
+[31m-[m
+[31m-1. g++ command is used to compile source file. One could type in codes as follow to generate executable file:[m
+[31m-[m
+[31m-```[m
+[31m-g++ -o hello hello.cpp[m
+[31m-chmod a+x hello[m
+[31m-./hello[m
+[31m-```[m
+[31m-[m
+[31m-where:[m
+[31m-- `-o` specifies the executable filename.[m
+[31m-- `chmod a+x` gives the file execute permission.[m
+[31m-- `./hello` runs the executable.[m
+[31m-- also, if you use `g++ hello.cpp`, you will get a `a.out` as an execuable.[m
+[31m-[m
+[31m-[Back to Top](#contents)[m
+[31m-[m
+[31m-# 2 Python[m
+[31m-[m
+[31m-See python tips in submodule **py-starter**. (for now)[m
+[31m-[m
+[31m-[Back to Top](#contents)[m
+[31m-[m
+[31m-# 3 Doxygen[m
+[31m-[m
+[31m-## 3.1 Normal Use of Doxygen Steps[m
+[31m-[m
+[31m-1. Install Doxygen ( Personal opinion, do not use GUI version ).[m
+[31m-2. Go to your repo directory.[m
+[31m-3. Open terminal here, type in `doxygen -g` to generate a Doxygen config file.[m
+[31m-4. Open the config file with editor, and go through some important tags, like "PROJECT_NAME", "INPUT", "USE_MDFILE_AS_MAINPAGE", etc.[m
+[31m-5. Modify the comment in your code so that it could be seen by doxygen.[m
+[31m-6. Use `doxygen Doxygen` to run the building process.[m
+[31m-[m
+[31m-[Back to Top](#contents)[m
+[31m-[m
+[31m-# 4 Ubuntu Tips[m
+[31m-[m
+[31m-## 4.1 Ubuntu 101[m
+[31m-    [m
+[31m-- Use `Ctrl+Alt+T` to open terminal.[m
+[31m-- In terminal, use `Ctrl+Shift+T` to open a new tab.[m
+[31m-- Use `Ctrl+D` to close terminal window.[m
+[31m-- Use `cd` to change directory.[m
+[31m-- Use `ls` to check list[m
+[31m-- Use `gedit ~/.bashrc` to open the file that will automatically run the moment you open a new terminal.[m
+[31m-    - Additionally, if you are using OS X, you can use `open -e [file name]` to open the file.[m
+[31m-[m
+[31m-## 4.2 Set Terminal Tab Name[m
+[31m-    [m
+[31m-Use `gedit ~/.bashrc` to open .bashrc file. Add script as follow:[m
+[31m-[m
+[31m-```[m
+[31m-function set-title(){[m
+[31m-if [[ -z "$ORIG" ]]; then[m
+[31m-ORIG=$PS1[m
+[31m-fi[m
+[31m-TITLE="\[\e]2;$*\a\]"[m
+[31m-PS1=${ORIG}${TITLE}[m
+[31m-}[m
+[31m-```[m
+[31m-[m
+[31m-Then you can use the function **set-title** to set title up.[m
+[31m-[m
+[31m-[Back to Top](#contents)[m
+[31m-[m
+[31m-# 5 General Tips[m
+[31m-[m
+[31m-## 5.1 Naming Rules[m
+[31m-[m
+[31m-1. For name of repos, one should use all lowercase letters with dash (**-**) connecting words.[m
+[31m-[m
+[31m-Example: **coding-learning**, **py-starter**[m
+[31m-[m
+[31m-2. For git commit comments, one should use "noun" + "verb past tense", all in lower-case unless specific words needed.[m
+[31m-[m
+[31m-Example: **README updated**, **more functions added**[m
+[31m-[m
+[31m-## 5.2 Choose License[m
+[31m-[m
+[31m-You can select a type of license for your project [here](https://choosealicense.com/).[m
+[31m-[m
+[31m-In this repo, you can see MIT License.[m
+[31m-[m
+[31m-## 5.3 Design Logo[m
+[31m-[m
+[31m-A logo is not really necessary for your project, but you can always use few minutes to design one simple logo that based on exist template.[m
+[31m-[m
+[31m-You can use different webside to do so. In this repo, you can see logo designed from [here](https://www.wix.com/logo/maker). Obviously, high resolution logo is expensive, however the low res one, which is good enough for us, is always free to get.[m
+[31m-[m
+[31m-## 5.4 Markdown[m
+[31m-[m
+[31m-Markdown, or .md file, is usful in github. If you wanna use some tricks in markdown file, all you need is google.com.[m
+[31m-[m
+[31m-Also, github supports some unique markdown feature, such as:[m
+[31m-[m
+[31m-- [ ] To-do List[m
+[31m-- [x] To-do List (Done)[m
+[31m-[m
+[31m-## 5.5 Learn Coding[m
+[31m-[m
+[31m-1. [sololearn](https://www.sololearn.com/).[m
+[31m-        You can have all types of code to learn. [m
+[31m-2. [cplusplus.com](http://www.cplusplus.com/doc/tutorial/) [m
+[31m-[m
+[31m-[Back to Top](#contents)[m
+[31m-[m
+[31m-## 5.6 Fancy Badge[m
+[31m-[m
+[31m-Do you want to have some fancy badges in your README, like this ![Mozilla Add-on](https://img.shields.io/amo/stars/dustman.svg) ? Check [shields.io](https://shields.io/) to get your own badge![m
+[31m-[m
+[31m-[Back to Top](#contents)[m
+[31m-[m
+[31m-# 6 Git[m
+[31m-[m
+[31m-Learning using git and GitHub are good for future work and our resume. Here are some simple hints to use git for this project.[m
+[31m-[m
+[31m-## 6.1 Git and GitHub[m
+[31m-[m
+[31m-The relationship between **git** and **GitHub** is simple: **git** is a software to help do version control; **GitHub** is a platform to store your code.[m
+[31m-[m
+[31m-The software **git** is commonly seen in Linux or Mac OS Terminal. Although you might be able to use it in Windows prompt, Chao does not believe the prompt is very user friendly. And of course, since the names are similar, you may think **git** could only submit codes to **GitHub**, but it is not true. The thing is, you can use **git** to push your code to your local server. It is useful because we can use **git** to control the version, just like what we did in Google Drive before:[m
+[31m-[m
+[31m-```[m
+[31m-TermPaper_v1.pdf[m
+[31m-TermPaper_v2.pdf[m
+[31m-TermPaper_final.pdf[m
+[31m-TermPaper_finalfinal.pdf[m
+[31m-TermPaper_finalfinal_no_typo.pdf[m
+[31m-Wonderful_TermPaper.pdf[m
+[31m-```[m
+[31m-[m
+[31m-On the other hand, **GitHub** supports your **git** very well, and in the mean time, it has so many other functions that we can use to build our project. We can learn the functionality with **git** together later.[m
+[31m-[m
+[31m-[Back to Top](#contents)[m
+[31m-[m
+[31m-## 6.2 Use Git on Windows[m
+[31m-[m
+[31m-Install **git** on Windows is not too hard, just follow the instrutor [here](https://www.atlassian.com/git/tutorials/install-git#windows)[m
+[31m-[m
+[31m-Other methods are pretty good too.[m
+[31m-[m
+[31m-1. Use Git Bash[m
+[31m-[m
+[31m-	**Git Bash** is more like a software that simulate terminal in linux. It is stright forward so please google **Git Bash** to download it.[m
+[31m-[m
+[31m-2. Use GitHub Desktop[m
+[31m-[m
+[31m-	Like described above, the GitHub Desktop is working for GitHub specificly. You can use it if the GitHub is the only platform you are using. By installing that app, you do not need to know how to use terminal command. But where is the fun of coding anyway? You may better want to get involved into terminal commands sooner than later.[m
+[31m-[m
+[31m-3. Use Editor Integrated Git[m
+[31m-[m
+[31m-	Many modern editors could do the git job for you by one single click, such as VS Code. But since it is integrated into this third-party software, you may encouter some bugs when you are using it. So why don't you just go ahead and learn termial commands?[m
+[31m-[m
+[31m-[Back to Top](#contents)[m
+[31m-[m
+[31m-## 6.3 Basic Git Command[m
+[31m-[m
+[31m-When we use git, we want to "download", "update" and "upload" the codes. The terms in git are:[m
+[31m-[m
+[31m-| Comman Name    | Term       | Command                      | Note                                      |[m
+[31m-| -------------- | ---------- |:----------------------------:| ----------------------------------------- |[m
+[31m-| project        | repository |                              | "repo" for short                          |[m
+[31m-| download       | clone      |`git clone`                   | clone the repo on GitHub to your computer |[m
+[31m-| update         | pull       |`git pull`                    | pull down the recent changes on GitHub    |[m
+[31m-| upload_step1   | add        |`git add .`                   | add all local changes into index          |[m
+[31m-| upload_step2   | commit     |`git commit -m "Your Message"`| store the index with message              |[m
+[31m-| upload_step3   | push       |`git push`                    | finally upload your codes to GitHub       |[m
+[31m-| whats going on | status     |`git status`                  | useful tool to debug                      |[m
+[31m-| versions       | branch     |`git branch`                  | see which "version" you are in right now  |[m
+[31m-| to be countinue|            |                              |                                           |[m
+[31m-[m
+[31m-When you have a remote repo:[m
+[31m-[m
+[31m-* Step1: go to the repo page, click **Clone or download**, choose **Use HTTPS**, copy the URL.[m
+[31m-[m
+[31m-* Step2: open prompt or terminal, try `cd` to your working folder. `cd` means change directory. Let's say you get a new created folder called "git-hub-repos" in "Document" folder. Firstly, `cd Documents\git-hub-repos`. Remember, you can use "Tab" key at your keyboard to autocomplete some command, like when you only have one folder that started with "Docu" in your Windows account, you can simply type in `cd Docu`, and press "Tab" to complete the entire word.[m
+[31m-[m
+[31m-	When you see you are in the "git-hub-repos" folder, it means you are in right path. If not, please go see this to learn command of Windows prompt [here](https://www.digitalcitizen.life/command-prompt-how-use-basic-commands?page=1).[m
+[31m-[m
+[31m-* Step3: use command "git clone YOUR_URL_HERE". Paste your URL to the right place, and press "Enter" key to let it finish the job.[m
+[31m-[m
+[31m-* Step4: `cd REPOS_NAME` to cd into your repo, then you can see and modify the files![m
+[31m-[m
+[31m-* Step5: Once you finished modified files, you can use git to upload them. Firstly, use `git config --global user.email YOUR_EMAIL`, then `git config --global user.name YOUR_NAME` to set up your info. [m
+[31m-[m
+[31m-	Then use commands line by line: `git add .` to add all changes, `git commit -m "YOUR MESSAGE"` to leave a message, `git push` to push it to remote end. You may need to enter your GitHub account and password to finish uploading process.[m
+[31m-[m
+[31m-* Step6: remember to use `git pull` to check the updates by other people every time you want to modify some files. If two or more people are modifying files and uploaded them at the same time, the git may need to process it by merging your two different commit, which could be tricky for this moment.[m
+[31m-[m
+[31m-[Back to Top](#contents)[m
+[31m-[m
+[31m-## 6.4 Use SSH[m
+[31m-[m
+[31m-If you find it really annoying that you need to type in your username and password every time you want to push codes to GitHub, maybe it is time for you to use SSH key. In short, SSH is a encrypted way to push and pull. The process would be:[m
+[31m-[m
+[31m-* Step1: generate a new local SSH key or find a exist key.[m
+[31m-[m
+[31m-* Step2: add this key to your GitHub account[m
+[31m-[m
+[31m-* Step3: job done![m
+[31m-[m
+[31m-The details could be found [here](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/). You can find both Mac, Windows, and Linux instrution there.[m
+[31m-[m
+[31m-## 6.5 Submodule[m
+[31m-[m
+[31m-If you want to use other repo to be a part of your project, you may want to use submodule of git. The details will be filled in later. For now, you can go [here](http://www.vogella.com/tutorials/GitSubmodules/article.html) to see how you can use it.[m
+[31m-[m
+[31m-[Back to Top](#contents)[m
+[31m-[m
+[31m-# 7 Graphviz[m
+[31m-[m
+[31m-![Tested Python Version](https://img.shields.io/badge/python-3.6-blue.svg)[m
+[31m-[m
+[31m-The graphviz is a powerful tool to plot diagrams from source code. You can use different engines to generate diagrams as pics or pdf in graphviz.[m
+[31m-[m
+[31m-The installation is simple and strightforward: go to [download](https://graphviz.gitlab.io/download/), find your OS and do as they said.[m
+[31m-[m
+[31m-## 7.1 DOT Language[m
+[31m-[m
+[31m-DOT language is simple. You could go [here](http://melp.nl/2013/08/flow-charts-in-code-enter-graphviz-and-the-dot-language/) to find a easy-handy example to plot flowchart.[m
+[31m-[m
+[31m-As is written in the example, you can use any editor to write down the code, and generate the format you want by command in terminal: `dot -Tpng -o example.png example.gv`[m
+[31m-[m
+[31m-[Back to Top](#contents)[m
+[31m-[m
+[31m-## 7.2 Python[m
+[31m-[m
+[31m-You can also use python to generate dot file. See [here](https://pypi.org/project/graphviz/) to see how to use it.[m
+[31m-[m
+[31m-You may need to use anaconda to run the script.[m
+[31m-[m
+[31m-[Back to Top](#contents)[m
+[1mdiff --git a/docs/_build/doctrees/environment.pickle b/docs/_build/doctrees/environment.pickle[m
+[1mindex 78d3af6..0a8880d 100644[m
+Binary files a/docs/_build/doctrees/environment.pickle and b/docs/_build/doctrees/environment.pickle differ
+[1mdiff --git a/docs/_build/doctrees/index.doctree b/docs/_build/doctrees/index.doctree[m
+[1mindex f20a15e..6434396 100644[m
+Binary files a/docs/_build/doctrees/index.doctree and b/docs/_build/doctrees/index.doctree differ
+[1mdiff --git a/docs/_build/html/_sources/index.rst.txt b/docs/_build/html/_sources/index.rst.txt[m
+[1mindex 53ab0a9..cd1477f 100644[m
+[1m--- a/docs/_build/html/_sources/index.rst.txt[m
+[1m+++ b/docs/_build/html/_sources/index.rst.txt[m
+[36m@@ -6,9 +6,16 @@[m
+ Welcome to coding-learning's documentation![m
+ ===========================================[m
+ [m
+[31m-This repo is for coding-learning for beginners. Please feel free to [m
+[32m+[m[32mThis repo is for coding-learning for beginners like me. Please feel free to[m[41m [m
+ contact me to work this together.[m
+ [m
+[32m+[m[32mTo build this page, there are several packages you may need to install[m[41m [m
+[32m+[m[32mfirst:[m
+[32m+[m[32m::[m
+[32m+[m
+[32m+[m[32m    conda create -n new-conda-env python=3.6[m
+[32m+[m[32m    conda install sphinx sphinx_rtd_theme[m
+[32m+[m
+ .. toctree::[m
+    :maxdepth: 2[m
+    :caption: Contents:[m
+[36m@@ -24,7 +31,6 @@[m [mcontact me to work this together.[m
+    documentation-by-sphinx[m
+ [m
+ [m
+[31m-[m
+ Indices and tables[m
+ ==================[m
+ [m
+[1mdiff --git a/docs/_build/html/index.html b/docs/_build/html/index.html[m
+[1mindex a639f99..7145032 100644[m
+[1m--- a/docs/_build/html/index.html[m
+[1m+++ b/docs/_build/html/index.html[m
+[36m@@ -154,8 +154,14 @@[m
+             [m
+   <div class="section" id="welcome-to-coding-learning-s-documentation">[m
+ <h1>Welcome to coding-learning’s documentation!<a class="headerlink" href="#welcome-to-coding-learning-s-documentation" title="Permalink to this headline">¶</a></h1>[m
+[31m-<p>This repo is for coding-learning for beginners. Please feel free to[m
+[32m+[m[32m<p>This repo is for coding-learning for beginners like me. Please feel free to[m
+ contact me to work this together.</p>[m
+[32m+[m[32m<p>To build this page, there are several packages you may need to install[m
+[32m+[m[32mfirst:</p>[m
+[32m+[m[32m<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">new</span><span class="o">-</span><span class="n">conda</span><span class="o">-</span><span class="n">env</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.6</span>[m
+[32m+[m[32m<span class="n">conda</span> <span class="n">install</span> <span class="n">sphinx</span> <span class="n">sphinx_rtd_theme</span>[m
+[32m+[m[32m</pre></div>[m
+[32m+[m[32m</div>[m
+ <div class="toctree-wrapper compound">[m
+ <p class="caption"><span class="caption-text">Contents:</span></p>[m
+ <ul>[m
+[1mdiff --git a/docs/_build/html/searchindex.js b/docs/_build/html/searchindex.js[m
+[1mindex 38cb611..73a4a42 100644[m
+[1m--- a/docs/_build/html/searchindex.js[m
+[1m+++ b/docs/_build/html/searchindex.js[m
+[36m@@ -1 +1 @@[m
+[31m-Search.setIndex({docnames:["cpp","documentation-by-sphinx","doxygen","general-tips","git","graphviz","index","python","ubuntu-tips","using-conda-environment"],envversion:{"sphinx.domains.c":1,"sphinx.domains.changeset":1,"sphinx.domains.cpp":1,"sphinx.domains.javascript":1,"sphinx.domains.math":2,"sphinx.domains.python":1,"sphinx.domains.rst":1,"sphinx.domains.std":1,sphinx:55},filenames:["cpp.rst","documentation-by-sphinx.rst","doxygen.rst","general-tips.rst","git.rst","graphviz.rst","index.rst","python.rst","ubuntu-tips.rst","using-conda-environment.rst"],objects:{},objnames:{},objtypes:{},terms:{"case":[3,9],"default":1,"export":6,"final":[4,7],"function":[3,4,8],"import":2,"new":[1,4,8],"short":4,"true":4,"try":[1,4],And:4,But:[4,7],For:[1,3,4,9],One:[0,9],The:[0,1,4,5,7,9],Then:[4,7,8],Use:[1,6,8,9],Using:6,With:1,_build:1,abl:4,about:1,abov:4,accept:7,account:4,activ:[1,6,7],add:[1,4,8],added:[1,3,9],adding:[],addition:8,affect:7,agent:[],ahead:4,all:[1,3,4,7],allow:7,alreadi:9,also:[0,1,3,5,7,9],alt:8,alternativli:1,although:4,alwai:[3,7],amo:[],anaconda3:9,anaconda:[5,9],ani:[1,5],annoi:4,anywai:4,app:[4,7],appli:[6,7],around:0,articl:[],attempt:1,autocomplet:4,automat:8,aviod:7,avoid:7,back:1,badg:6,base:[1,3],bash:4,bashrc:[8,9],basic:[1,6],bat:1,beauti:1,becaus:4,befor:4,beginn:6,believ:[1,4],below:9,besid:7,better:4,between:4,bin:9,block:[],both:[4,9],branch:4,bug:4,build:[1,2,4,9],call:[1,4,9],can:[1,3,4,5,7,8,9],certain:7,chang:[4,8],chao:4,check:[3,4,8,9],chmod:0,choos:[4,6,9],clean:1,click:4,clone:[4,7,9],close:8,code:[2,4,5,9],com:3,comman:[],command:[0,1,5,6,9],comment:[2,3,9],commit:[3,4],common:4,commonli:4,compil:0,complet:4,comput:[4,7],conda:[1,6],config:[2,4,6],connect:3,contact:6,content:[1,6],control:4,copi:4,correspond:1,could:[0,1,2,4,5,9],countinu:4,cours:4,cplusplu:3,cpp:6,creat:[4,6,7],cross:9,ctrl:8,current:6,dash:3,deactiv:9,debug:4,depend:7,describ:4,design:6,desin:3,desktop:4,detail:[1,4,9],detour:7,diagram:5,did:4,differ:[1,3,4,5],digitalcitizen:[],direct:1,directli:[1,9],directori:[1,2,4,8,9],doc:[1,9],docu:4,document:[4,9],documentsgit:4,doe:4,doesn:7,don:4,done:[3,4],dot:6,down:[4,5],download:[4,5],doxygen:6,drive:4,dustman:[],each:1,easi:[5,7,9],edit:[6,9],editor:[2,4,5],either:1,email:4,empti:1,encout:4,encrypt:4,end:4,engin:5,enough:3,enter:4,entir:4,env:6,environ:[1,6],equiv:1,etc:2,everi:4,exampl:[1,3,5],execu:0,execut:0,exist:[3,4,9],exit:6,expens:3,fanci:6,featur:3,feel:6,few:[1,3],figur:1,file:[0,1,2,3,4,5,6,8],filenam:0,fill:[1,4],find:[1,4,5,7],finish:[1,4,9],first:[0,1,9],firstli:4,flowchart:5,folder:[1,4,7],follow:[0,1,4,8,9],format:5,forward:4,found:[4,9],free:[1,3,6],friendli:4,from:[1,3,5,9],fun:4,futur:4,gcc:6,gedit:8,gener:[0,1,2,4,5,6],get:[0,3,4],git:[3,6,7,9],github:[3,6],gitsubmodul:[],give:[0,1],global:[4,7],gnu:0,goe:1,going:[1,4],good:[1,3,4,7],googl:[3,4],graphviz:6,gui:2,hand:4,handi:5,hard:4,has:[4,7,9],have:[1,3,4,7],head1:[],head2:[],hello:0,help:[1,4],here:[0,1,2,3,4,5,7,9],high:3,hint:4,home:9,host:1,how:[1,4,5,6],howev:3,html:1,http:[1,4],hub:4,idea:[1,7],imag:[],img:[],index:[4,6],info:4,input:2,insid:[1,7],instal:[2,4,5,6,7,9],instruct:1,instrut:4,instrutor:4,integr:[4,7],introduct:1,involv:4,isol:7,its:[7,9],job:[1,4],just:4,kei:4,keyboard:4,know:4,languag:6,later:4,learn:[0,4,9],leav:[4,9],let:[1,4],letter:3,lfs:7,licens:6,life:[],like:[2,3,4],limit:7,line:[4,9],link:1,linux:[4,9],list:[3,6,8],local:[4,7,9],logo:6,look:0,low:3,lower:3,lowercas:3,mac:4,mai:[1,4,5],maintain:1,make:[1,6,7],makefil:1,mani:4,markdown:[1,4,6],mayb:4,mean:4,merg:4,mess:[7,9],messag:4,meta:1,method:[4,7],might:4,minut:[1,3],mit:3,modern:4,modifi:[2,4],modul:6,moment:[4,8],more:[1,3,4],move:[1,9],mozilla:[],name:[1,4,6,9],nameenviron:9,natur:7,neat:[1,7],necessari:3,need:[1,3,4,5,7,9],nice:1,normal:6,note:[1,4,9],notic:[1,9],noun:3,now:[4,7,9],number:7,obtain:9,obvious:3,offer:1,onc:[1,4,7,9],one:[0,3,4,9],onli:[1,4,9],onlin:1,open:[2,4,8],opinion:2,orig:8,other:[1,4],our:4,out:[0,1,7,9],outsid:7,own:[3,9],pacakg:9,packag:[1,7],page:[4,6,9],part:4,parti:4,password:4,past:[3,4],path:4,patient:1,pdf:[4,5],peopl:4,permiss:0,person:2,pic:5,pip:1,place:[1,4],plai:7,platform:[4,9],pleas:[1,4,6,9],plot:5,plu:9,png:5,power:5,press:4,pretti:4,problem:7,process:[2,4],project:[3,4,9],project_nam:2,prompt:4,ps1:8,pull:4,push:[4,6],python:[6,9],quick:1,quickstart:6,read:1,readm:3,realli:[3,4],recent:4,refresh:1,relationship:4,rememb:4,remot:4,repo:[1,2,3,4,6,7,9],repos_nam:4,repositori:4,requir:7,res:3,resolut:3,respons:1,restructedtext:1,resum:4,right:4,root:1,rst:1,rule:6,run:[0,1,2,5,8],sai:4,said:5,same:[4,6],script:[1,5,7,8],search:6,section:[1,9],see:[1,3,4,5,6,7],seen:[0,2,4],select:3,seper:1,server:4,servic:1,set:[4,6],setup:[1,7],sever:7,shield:3,shift:8,should:3,shown:4,similar:[4,9],simpl:[3,4,5],simpli:4,simul:4,sinc:[1,4],singl:4,size:7,slow:1,softwar:4,sololearn:3,solut:1,some:[1,2,3,4],sometim:1,sooner:4,sourc:[0,1,5,9],specif:3,specifi:[0,9],specificli:4,sphinx:6,sphinx_rtd_them:1,ssh:6,star:[],start:4,starter:[3,7],statu:4,step1:4,step2:4,step3:4,step4:4,step5:4,step6:4,step:[1,6,9],still:1,store:4,stright:4,strightforward:5,submit:4,submodul:[6,7],suggest:1,support:[3,4,7],svg:[],tab:[4,6],tabl:4,tag:2,take:[1,7],target:[],templat:3,tens:3,term:4,termial:4,termianl:0,termin:[1,2,4,5,6,9],termpaper_fin:4,termpaper_finalfin:4,termpaper_finalfinal_no_typo:4,termpaper_v1:4,termpaper_v2:4,than:4,thei:[1,5],them:[1,4],theme:1,therefor:[1,7],thi:[1,3,4,6,7,9],thing:[4,9],think:4,third:4,those:1,through:2,thu:1,time:4,tip:[1,6,7],titl:8,togeth:[4,6],too:[4,7],tool:[4,5],top:[],total:7,tpng:5,track:7,trick:3,tricki:4,tutori:0,two:4,type:[2,3,4],ubuntu:[6,7,9],under:1,uniqu:3,unless:3,updat:[3,4,9],upload:[4,7],upload_step1:4,upload_step2:4,upload_step3:4,url:[1,4],usag:1,use:[0,1,2,3,4,5,7,8,9],use_mdfile_as_mainpag:2,used:0,useful:[1,4],user:4,usernam:4,uses:1,usful:3,using:[1,4,8,9],venv:7,verb:3,veri:4,version:[2,4,7,9],virtual:9,vogella:[],wai:[4,7],wanna:3,want:[1,3,4,5,7,9],websid:3,websit:1,well:4,what:[1,4],when:[1,4,7,9],where:[0,4,9],which:[3,4,7],whole:7,why:4,window:[6,7,8],without:7,wix:3,won:[7,9],wonderful_termpap:4,word:[3,4],work:[1,4,6,9],world:7,would:[1,4],write:[5,7],writen:9,written:5,www:[],yml:6,you:[0,1,3,4,5,7,8,9],your:[1,2,3,4,5,7,9],your_email:4,your_nam:4,your_url_her:4,yourself:7},titles:["1 CPP","9 Documentation by Sphinx","3 Doxygen","5 General Tips","6 Git","7 Graphviz","Welcome to coding-learning\u2019s documentation!","2 Python","4 Ubuntu Tips","8 Using Conda Environment"],titleterms:{"export":9,"new":7,Use:[2,4],Using:[7,9],activ:9,anoth:7,appli:1,attempt:7,badg:3,basic:4,choos:3,code:[3,6],command:4,conda:9,config:7,cpp:0,creat:9,current:9,design:3,document:[1,6],dot:5,doxygen:2,edit:1,env:9,environ:[7,9],exit:9,fanci:3,file:[7,9],gcc:0,gener:3,git:4,github:[1,4,7],graphviz:5,how:9,index:1,indic:6,instal:1,languag:5,larg:7,learn:[3,6],licens:3,list:9,logo:3,mai:7,make:0,markdown:3,name:[3,8],normal:2,page:1,previou:[],push:1,python:[5,7],quickstart:1,rule:3,same:9,see:9,set:8,sphinx:1,ssh:4,step:2,storag:7,submodul:4,tab:8,tabl:6,termin:8,tip:[3,8],ubuntu:8,virtual:7,welcom:6,window:4,work:7,yml:9}})[m
+\ No newline at end of file[m
+[32m+[m[32mSearch.setIndex({docnames:["cpp","documentation-by-sphinx","doxygen","general-tips","git","graphviz","index","python","ubuntu-tips","using-conda-environment"],envversion:{"sphinx.domains.c":1,"sphinx.domains.changeset":1,"sphinx.domains.cpp":1,"sphinx.domains.javascript":1,"sphinx.domains.math":2,"sphinx.domains.python":1,"sphinx.domains.rst":1,"sphinx.domains.std":1,sphinx:55},filenames:["cpp.rst","documentation-by-sphinx.rst","doxygen.rst","general-tips.rst","git.rst","graphviz.rst","index.rst","python.rst","ubuntu-tips.rst","using-conda-environment.rst"],objects:{},objnames:{},objtypes:{},terms:{"case":[3,9],"default":1,"export":6,"final":[4,7],"function":[3,4,8],"import":2,"new":[1,4,6,8],"short":4,"true":4,"try":[1,4],And:4,But:[4,7],For:[1,3,4,9],One:[0,9],The:[0,1,4,5,7,9],Then:[4,7,8],Use:[1,6,8,9],Using:6,With:1,_build:1,abl:4,about:1,abov:4,accept:7,account:4,activ:[1,6,7],add:[1,4,8],added:[1,3,9],adding:[],addition:8,affect:7,agent:[],ahead:4,all:[1,3,4,7],allow:7,alreadi:9,also:[0,1,3,5,7,9],alt:8,alternativli:1,although:4,alwai:[3,7],amo:[],anaconda3:9,anaconda:[5,9],ani:[1,5],annoi:4,anywai:4,app:[4,7],appli:[6,7],around:0,articl:[],attempt:1,autocomplet:4,automat:8,aviod:7,avoid:7,back:1,badg:6,base:[1,3],bash:4,bashrc:[8,9],basic:[1,6],bat:1,beauti:1,becaus:4,befor:4,beginn:6,believ:[1,4],below:9,besid:7,better:4,between:4,bin:9,block:[],both:[4,9],branch:4,bug:4,build:[1,2,4,6,9],call:[1,4,9],can:[1,3,4,5,7,8,9],certain:7,chang:[4,8],chao:4,check:[3,4,8,9],chmod:0,choos:[4,6,9],clean:1,click:4,clone:[4,7,9],close:8,code:[2,4,5,9],com:3,comman:[],command:[0,1,5,6,9],comment:[2,3,9],commit:[3,4],common:4,commonli:4,compil:0,complet:4,comput:[4,7],conda:[1,6],config:[2,4,6],connect:3,contact:6,content:[1,6],control:4,copi:4,correspond:1,could:[0,1,2,4,5,9],countinu:4,cours:4,cplusplu:3,cpp:6,creat:[4,6,7],cross:9,ctrl:8,current:6,dash:3,deactiv:9,debug:4,depend:7,describ:4,design:6,desin:3,desktop:4,detail:[1,4,9],detour:7,diagram:5,did:4,differ:[1,3,4,5],digitalcitizen:[],direct:1,directli:[1,9],directori:[1,2,4,8,9],doc:[1,9],docu:4,document:[4,9],documentsgit:4,doe:4,doesn:7,don:4,done:[3,4],dot:6,down:[4,5],download:[4,5],doxygen:6,drive:4,dustman:[],each:1,easi:[5,7,9],edit:[6,9],editor:[2,4,5],either:1,email:4,empti:1,encout:4,encrypt:4,end:4,engin:5,enough:3,enter:4,entir:4,env:6,environ:[1,6],equiv:1,etc:2,everi:4,exampl:[1,3,5],execu:0,execut:0,exist:[3,4,9],exit:6,expens:3,fanci:6,featur:3,feel:6,few:[1,3],figur:1,file:[0,1,2,3,4,5,6,8],filenam:0,fill:[1,4],find:[1,4,5,7],finish:[1,4,9],first:[0,1,6,9],firstli:4,flowchart:5,folder:[1,4,7],follow:[0,1,4,8,9],format:5,forward:4,found:[4,9],free:[1,3,6],friendli:4,from:[1,3,5,9],fun:4,futur:4,gcc:6,gedit:8,gener:[0,1,2,4,5,6],get:[0,3,4],git:[3,6,7,9],github:[3,6],gitsubmodul:[],give:[0,1],global:[4,7],gnu:0,goe:1,going:[1,4],good:[1,3,4,7],googl:[3,4],graphviz:6,gui:2,hand:4,handi:5,hard:4,has:[4,7,9],have:[1,3,4,7],head1:[],head2:[],hello:0,help:[1,4],here:[0,1,2,3,4,5,7,9],high:3,hint:4,home:9,host:1,how:[1,4,5,6],howev:3,html:1,http:[1,4],hub:4,idea:[1,7],imag:[],img:[],index:[4,6],info:4,input:2,insid:[1,7],instal:[2,4,5,6,7,9],instruct:1,instrut:4,instrutor:4,integr:[4,7],introduct:1,involv:4,isol:7,its:[7,9],job:[1,4],just:4,kei:4,keyboard:4,know:4,languag:6,later:4,learn:[0,4,9],leav:[4,9],let:[1,4],letter:3,lfs:7,licens:6,life:[],like:[2,3,4,6],limit:7,line:[4,9],link:1,linux:[4,9],list:[3,6,8],local:[4,7,9],logo:6,look:0,low:3,lower:3,lowercas:3,mac:4,mai:[1,4,5,6],maintain:1,make:[1,6,7],makefil:1,mani:4,markdown:[1,4,6],mayb:4,mean:4,merg:4,mess:[7,9],messag:4,meta:1,method:[4,7],might:4,minut:[1,3],mit:3,modern:4,modifi:[2,4],modul:6,moment:[4,8],more:[1,3,4],move:[1,9],mozilla:[],name:[1,4,6,9],nameenviron:9,natur:7,neat:[1,7],necessari:3,need:[1,3,4,5,6,7,9],nice:1,normal:6,note:[1,4,9],notic:[1,9],noun:3,now:[4,7,9],number:7,obtain:9,obvious:3,offer:1,onc:[1,4,7,9],one:[0,3,4,9],onli:[1,4,9],onlin:1,open:[2,4,8],opinion:2,orig:8,other:[1,4],our:4,out:[0,1,7,9],outsid:7,own:[3,9],pacakg:9,packag:[1,6,7],page:[4,6,9],part:4,parti:4,password:4,past:[3,4],path:4,patient:1,pdf:[4,5],peopl:4,permiss:0,person:2,pic:5,pip:1,place:[1,4],plai:7,platform:[4,9],pleas:[1,4,6,9],plot:5,plu:9,png:5,power:5,press:4,pretti:4,problem:7,process:[2,4],project:[3,4,9],project_nam:2,prompt:4,ps1:8,pull:4,push:[4,6],python:[6,9],quick:1,quickstart:6,read:1,readm:3,realli:[3,4],recent:4,refresh:1,relationship:4,rememb:4,remot:4,repo:[1,2,3,4,6,7,9],repos_nam:4,repositori:4,requir:7,res:3,resolut:3,respons:1,restructedtext:1,resum:4,right:4,root:1,rst:1,rule:6,run:[0,1,2,5,8],sai:4,said:5,same:[4,6],script:[1,5,7,8],search:6,section:[1,9],see:[1,3,4,5,6,7],seen:[0,2,4],select:3,seper:1,server:4,servic:1,set:[4,6],setup:[1,7],sever:[6,7],shield:3,shift:8,should:3,shown:4,similar:[4,9],simpl:[3,4,5],simpli:4,simul:4,sinc:[1,4],singl:4,size:7,slow:1,softwar:4,sololearn:3,solut:1,some:[1,2,3,4],sometim:1,sooner:4,sourc:[0,1,5,9],specif:3,specifi:[0,9],specificli:4,sphinx:6,sphinx_rtd_them:[1,6],ssh:6,star:[],start:4,starter:[3,7],statu:4,step1:4,step2:4,step3:4,step4:4,step5:4,step6:4,step:[1,6,9],still:1,store:4,stright:4,strightforward:5,submit:4,submodul:[6,7],suggest:1,support:[3,4,7],svg:[],tab:[4,6],tabl:4,tag:2,take:[1,7],target:[],templat:3,tens:3,term:4,termial:4,termianl:0,termin:[1,2,4,5,6,9],termpaper_fin:4,termpaper_finalfin:4,termpaper_finalfinal_no_typo:4,termpaper_v1:4,termpaper_v2:4,than:4,thei:[1,5],them:[1,4],theme:1,therefor:[1,7],thi:[1,3,4,6,7,9],thing:[4,9],think:4,third:4,those:1,through:2,thu:1,time:4,tip:[1,6,7],titl:8,togeth:[4,6],too:[4,7],tool:[4,5],top:[],total:7,tpng:5,track:7,trick:3,tricki:4,tutori:0,two:4,type:[2,3,4],ubuntu:[6,7,9],under:1,uniqu:3,unless:3,updat:[3,4,9],upload:[4,7],upload_step1:4,upload_step2:4,upload_step3:4,url:[1,4],usag:1,use:[0,1,2,3,4,5,7,8,9],use_mdfile_as_mainpag:2,used:0,useful:[1,4],user:4,usernam:4,uses:1,usful:3,using:[1,4,8,9],venv:7,verb:3,veri:4,version:[2,4,7,9],virtual:9,vogella:[],wai:[4,7],wanna:3,want:[1,3,4,5,7,9],websid:3,websit:1,well:4,what:[1,4],when:[1,4,7,9],where:[0,4,9],which:[3,4,7],whole:7,why:4,window:[6,7,8],without:7,wix:3,won:[7,9],wonderful_termpap:4,word:[3,4],work:[1,4,6,9],world:7,would:[1,4],write:[5,7],writen:9,written:5,www:[],yml:6,you:[0,1,3,4,5,6,7,8,9],your:[1,2,3,4,5,7,9],your_email:4,your_nam:4,your_url_her:4,yourself:7},titles:["1 CPP","9 Documentation by Sphinx","3 Doxygen","5 General Tips","6 Git","7 Graphviz","Welcome to coding-learning\u2019s documentation!","2 Python","4 Ubuntu Tips","8 Using Conda Environment"],titleterms:{"export":9,"new":7,Use:[2,4],Using:[7,9],activ:9,anoth:7,appli:1,attempt:7,badg:3,basic:4,choos:3,code:[3,6],command:4,conda:9,config:7,cpp:0,creat:9,current:9,design:3,document:[1,6],dot:5,doxygen:2,edit:1,env:9,environ:[7,9],exit:9,fanci:3,file:[7,9],gcc:0,gener:3,git:4,github:[1,4,7],graphviz:5,how:9,index:1,indic:6,instal:1,languag:5,larg:7,learn:[3,6],licens:3,list:9,logo:3,mai:7,make:0,markdown:3,name:[3,8],normal:2,page:1,previou:[],push:1,python:[5,7],quickstart:1,rule:3,same:9,see:9,set:8,sphinx:1,ssh:4,step:2,storag:7,submodul:4,tab:8,tabl:6,termin:8,tip:[3,8],ubuntu:8,virtual:7,welcom:6,window:4,work:7,yml:9}})[m
+\ No newline at end of file[m
+[1mdiff --git a/docs/index.rst b/docs/index.rst[m
+[1mindex 557dd7c..cd1477f 100644[m
+[1m--- a/docs/index.rst[m
+[1m+++ b/docs/index.rst[m
+[36m@@ -6,9 +6,16 @@[m
+ Welcome to coding-learning's documentation![m
+ ===========================================[m
+ [m
+[31m-This repo is for coding-learning for beginners. Please feel free to [m
+[32m+[m[32mThis repo is for coding-learning for beginners like me. Please feel free to[m[41m [m
+ contact me to work this together.[m
+ [m
+[32m+[m[32mTo build this page, there are several packages you may need to install[m[41m [m
+[32m+[m[32mfirst:[m
+[32m+[m[32m::[m
+[32m+[m
+[32m+[m[32m    conda create -n new-conda-env python=3.6[m
+[32m+[m[32m    conda install sphinx sphinx_rtd_theme[m
+[32m+[m
+ .. toctree::[m
+    :maxdepth: 2[m
+    :caption: Contents:[m

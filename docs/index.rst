@@ -6,8 +6,15 @@
 Welcome to coding-learning's documentation!
 ===========================================
 
-This repo is for coding-learning for beginners. Please feel free to 
+This repo is for coding-learning for beginners like me. Please feel free to 
 contact me to work this together.
+
+To build this page, there are several packages you may need to install 
+first:
+::
+
+    conda create -n new-conda-env python=3.6
+    conda install sphinx sphinx_rtd_theme
 
 .. toctree::
    :maxdepth: 2
