@@ -14,6 +14,7 @@ first:
 ::
 
     conda create -n new-conda-env python=3.6
+    conda activate new-conda-env
     conda install sphinx sphinx_rtd_theme
 
 .. toctree::
