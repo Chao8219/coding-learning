@@ -86,6 +86,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">4 Ubuntu Tips</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#ubuntu-101">4.1 Ubuntu 101</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#set-terminal-tab-name">4.2 Set Terminal Tab Name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bash-shell-script">4.3 Bash Shell Script</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="general-tips.html">5 General Tips</a></li>
@@ -161,23 +162,15 @@
 <h1>4 Ubuntu Tips<a class="headerlink" href="#ubuntu-tips" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="ubuntu-101">
 <h2>4.1 Ubuntu 101<a class="headerlink" href="#ubuntu-101" title="Permalink to this headline">¶</a></h2>
-<ul>
-<li><p class="first">Use <strong>Ctrl+Alt+T</strong> to open terminal.</p>
-</li>
-<li><p class="first">In terminal, use <strong>Ctrl+Shift+T</strong> to open a new tab.</p>
-</li>
-<li><p class="first">Use <strong>Ctrl+D</strong> to close terminal window.</p>
-</li>
-<li><p class="first">Use <strong>cd</strong> to change directory.</p>
-</li>
-<li><p class="first">Use <strong>ls</strong> to check list</p>
-</li>
-<li><p class="first">Use <strong>gedit ~/.bashrc</strong> to open the file that will automatically run
-the moment you open a new terminal.
-- Additionally, if you are using OS X, you can use <a href="#id1"><span class="problematic" id="id2">**</span></a>open -e</p>
-<blockquote>
-<div><p>[file name]** to open the file.</p>
-</div></blockquote>
+<ul class="simple">
+<li>Use <strong>Ctrl+Alt+T</strong> to open terminal.</li>
+<li>In terminal, use <strong>Ctrl+Shift+T</strong> to open a new tab.</li>
+<li>Use <strong>Ctrl+D</strong> to close terminal window.</li>
+<li>Use <strong>cd</strong> to change directory.</li>
+<li>Use <strong>ls</strong> to check list</li>
+<li>Use <strong>gedit ~/.bashrc</strong> to open the file that will automatically run the moment you open a new terminal.<ul>
+<li>Additionally, if you are using OS X, you can use <strong>open -e [file name]</strong> to open the file.</li>
+</ul>
 </li>
 </ul>
 </div>
@@ -194,6 +187,11 @@ PS1=${ORIG}${TITLE}
 </pre></div>
 </div>
 <p>Then you can use the function <strong>set-title</strong> to set title up.</p>
+</div>
+<div class="section" id="bash-shell-script">
+<h2>4.3 Bash Shell Script<a class="headerlink" href="#bash-shell-script" title="Permalink to this headline">¶</a></h2>
+<p>Write and run bash shell script is simple. Please see the bash file in
+this repo to use it.</p>
 </div>
 </div>
 

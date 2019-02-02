@@ -1,0 +1,6 @@
+#!/bin/bash
+conda_env="anaconda3/bin/activate coding-learning-env"
+repo_loc="git-chao-repos/coding-learning"
+cd ~
+source ${conda_env}
+cd ${repo_loc}

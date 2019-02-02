@@ -62,3 +62,4 @@ like this:
 .. image:: https://img.shields.io/amo/stars/dustman.svg
 
 Check `shields.io <https://shields.io/>`_ to get your own badge!
+

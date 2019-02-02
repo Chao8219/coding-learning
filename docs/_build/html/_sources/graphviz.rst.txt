@@ -15,7 +15,7 @@ as they said.
 7.1 DOT Language
 ================
 
-DOT language is simple. You could go `here <http://melp.nl/2013/08/
+DOT language is simple. You could go `help-doc <http://melp.nl/2013/08/
 flow-charts-in-code-enter-graphviz-and-the-dot-language/>`_ to find a 
 easy-handy example to plot flowchart.
 

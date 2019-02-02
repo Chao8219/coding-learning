@@ -9,7 +9,6 @@
 2. Go to your repo directory.
 3. Open terminal here, type in 
    ::
-
         doxygen -g
    
    to generate a Doxygen config file.
