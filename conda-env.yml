@@ -1,6 +1,7 @@
 name: coding-learning-env
 channels:
   - defaults
+  - conda-forge
 dependencies:
   - alabaster=0.7.12=py36_0
   - asn1crypto=0.24.0=py36_0
@@ -45,5 +46,5 @@ dependencies:
   - wheel=0.32.3=py36_0
   - xz=5.2.4=h14c3975_4
   - zlib=1.2.11=h7b6447c_3
-prefix: /home/chao/anaconda3/envs/coding-learning-env
+prefix: /home/zichao/anaconda3/envs/coding-learning-env
 
