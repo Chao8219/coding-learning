@@ -6,8 +6,8 @@
 Welcome to coding-learning's documentation!
 ===========================================
 
-This repo is for coding-learning for beginners like me. Please feel free to 
-contact me to work this together.
+This repo is for coding-learning for beginners like me. 
+Please feel free to contact me to work this together.
 
 To build this page, there are several packages you may need to install 
 first:

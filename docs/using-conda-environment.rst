@@ -13,9 +13,9 @@ installer so that you won't mess up anaconda python and OS python.
 See below section to check how to activate conda.
 
 Similar with python virtual environment, conda has its own 
-environment. The detailed documentation could be found 
-`conda.io <https://conda.io/docs/user-guide/tasks/
-manage-environments.html>`_.
+environment. 
+The detailed documentation could be found `conda.io <https://conda.io/docs/
+user-guide/tasks/manage-environments.html>`_.
 
 For this project, I created an environment called **coding-learning-env**. 
 You can create the same environment by using the "conda-env.yml" file.
@@ -23,14 +23,15 @@ You can create the same environment by using the "conda-env.yml" file.
 8.0 How to create a conda env
 =============================
 
-The first thing first to learn is to create a conda environment. Creating 
-a conda env is as easy as:
+The first thing first to learn is to create a conda environment. 
+Creating a conda env is as easy as:
 ::
 
     conda create --name my-conda-env
 
-where the "my-conda-env" is the name of your environment. You can also 
-specify the version of python you choose to use in that environment:
+where the "my-conda-env" is the name of your environment. 
+You can also specify the version of python you choose to use in that 
+environment:
 ::
 
     conda create -n my-conda-env python=3.6

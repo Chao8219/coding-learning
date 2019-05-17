@@ -33,5 +33,5 @@ Then you can use the function **set-title** to set title up.
 4.3 Bash Shell Script
 =====================
 
-Write and run bash shell script is simple. Please see the bash file in 
-this repo to use it.
+Write and run bash shell script is simple. 
+Please see the bash file in this repo to use it.

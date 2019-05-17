@@ -14,11 +14,12 @@ store your code.
 
 The software **git** is commonly seen in Linux or Mac OS Terminal. 
 Although you might be able to use it in Windows prompt, Chao does not 
-believe the prompt is very user friendly. And of course, since the names 
-are similar, you may think **git** could only submit codes to **GitHub**, 
-but it is not true. The thing is, you can use **git** to push your code 
-to your local server. It is useful because we can use **git** to 
-control the version, just like what we did in Google Drive before:
+believe the prompt is very user friendly. 
+And of course, since the names are similar, you may think **git** could 
+only submit codes to **GitHub**, but it is not true. 
+The thing is, you can use **git** to push your code to your local server. 
+It is useful because we can use **git** to control versions, 
+just like what we did in Google Drive before:
 ::
 
     TermPaper_v1.pdf
@@ -30,13 +31,15 @@ control the version, just like what we did in Google Drive before:
 
 On the other hand, **GitHub** supports your **git** very well, and in 
 the mean time, it has so many other functions that we can use to build 
-our project. We can learn the functionality with **git** together later.
+our project. 
+We can learn the functionality with **git** together later.
 
 6.2 Use Git on Windows
 ======================
 
 Install **git** on Windows is not too hard, just follow the instrutor 
-`here <https://www.atlassian.com/git/tutorials/install-git#windows>`_.
+`install git @ windows <https://www.atlassian.com/git/
+tutorials/install-git#windows>`_.
 
 Other methods are pretty good too.
 
@@ -48,18 +51,25 @@ Other methods are pretty good too.
 2. Use GitHub Desktop
 
    Like described above, the GitHub Desktop is working for GitHub 
-   specificly. You can use it if the GitHub is the only platform 
-   you are using. By installing that app, you do not need to know 
-   how to use terminal command. But where is the fun of coding anyway? 
+   specificly. 
+   You can use it if the GitHub is the only platform you are using. 
+   By installing that app, you do not need to know how to use terminal 
+   command. 
+   But where is the fun of coding anyway? 
    You may better want to get involved into terminal commands 
    sooner than later.
 
 3. Use Editor Integrated Git
 
    Many modern editors could do the git job for you by one 
-   single click, such as VS Code. But since it is integrated into this 
-   third-party software, you may encouter some bugs when you are 
-   using it. So why don't you just go ahead and learn termial commands?
+   single click, such as VS Code. 
+   But since it is integrated into this third-party software, you may 
+   encouter some bugs while you are  using it. 
+   So why don't you just go ahead and learn termial commands?
+
+   Also, installing VS Code does not mean you can get git automatically. 
+   That is said you still need to install git additionally.
+
 
 6.3 Basic Git Command
 =====================
@@ -111,19 +121,22 @@ When you have a remote repo:
 
 * Step2: open prompt or terminal, try *cd* to your working folder. 
   *cd* means change directory. Let's say you get a new created folder 
-  called "git-hub-repos" in "Document" folder. Firstly, 
-  *cd Documents\git-hub-repos*. Remember, you can use "Tab" key at your 
-  keyboard to autocomplete some command, like when you only have one 
-  folder that started with "Docu" in your Windows account, you can simply 
-  type in *cd Docu*, and press "Tab" to complete the entire word.
+  called "git-hub-repos" in "Document" folder. 
+  Firstly, *cd Documents\git-hub-repos*. 
+  Remember, you can use "Tab" key at your keyboard to autocomplete 
+  some command, like when you only have one folder that started 
+  with "Docu" in your Windows account, you can simply type in 
+  *cd Docu*, and press "Tab" to complete the entire word.
 
   When you see you are in the "git-hub-repos" folder, it means you are in 
-  right path. If not, please go see this to learn command of Windows 
+  right path. 
+  If not, please go see this to learn command of Windows 
   prompt here: `Windows prompt <https://www.digitalcitizen.life/
   command-prompt-how-use-basic-commands?page=1>`_.
 
-* Step3: use command "git clone YOUR_URL_HERE". Paste your URL to 
-  the right place, and press "Enter" key to let it finish the job.
+* Step3: use command "git clone YOUR_URL_HERE". 
+  Paste your URL to the right place, and press "Enter" key 
+  to let it finish the job.
 
 * Step4: *cd REPOS_NAME* to cd into your repo, then you can see and 
   modify the files!
@@ -134,22 +147,24 @@ When you have a remote repo:
 
   Then use commands line by line: *git add .* to add all changes, 
   *git commit -m "YOUR MESSAGE"* to leave a message, *git push* to push it 
-  to remote end. You may need to enter your GitHub account and password to 
-  finish uploading process.
+  to remote end. 
+  You may need to enter your GitHub account and password to finish 
+  uploading process.
 
 * Step6: remember to use *git pull* to check the updates by other people 
-  every time you want to modify some files. If two or more people are 
-  modifying files and uploaded them at the same time, the git may 
-  need to process it by merging your two different commit, 
-  which could be tricky for this moment.
+  every time you want to modify some files. 
+  If two or more people are modifying files and uploaded them at the 
+  same time, the git may need to process it by merging your two 
+  different commit, which could be tricky for this moment.
 
 6.4 Use SSH
 ===========
 
 If you find it really annoying that you need to type in your username and 
 password every time you want to push codes to GitHub, maybe it is time 
-for you to use SSH key. In short, SSH is a encrypted way to 
-push and pull. The process would be:
+for you to use SSH key. 
+In short, SSH is a encrypted way to push and pull. 
+The process would be:
 
 * Step1: generate a new local SSH key or find a exist key.
 
@@ -165,6 +180,7 @@ You can find both Mac, Windows, and Linux instrution there.
 =============
 
 If you want to use other repo to be a part of your project, you may want 
-to use submodule of git. The details will be filled in later. For now, 
-you can go here: `submodule <http://www.vogella.com/tutorials/
+to use submodule of git. 
+The details will be filled in later. 
+For now, you can go here: `submodule <http://www.vogella.com/tutorials/
 GitSubmodules/article.html>`_ to see how you can use it.

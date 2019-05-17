@@ -37,8 +37,8 @@ which is good enough for us, is always free to get.
 5.4 Markdown
 ============
 
-Markdown, or .md file, is usful in github. If you wanna use some tricks 
-in markdown file, all you need is google.com.
+Markdown, or .md file, is usful in github. 
+If you wanna use some tricks in markdown file, all you need is google.com.
 
 Also, github supports some unique markdown feature, such as:
 ::

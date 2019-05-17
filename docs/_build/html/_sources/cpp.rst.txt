@@ -10,8 +10,8 @@ To learn C++, one could look around GCC (GNU C Compiler) first.
 The tutorial could be seen `here <https://www3.ntu.edu.sg/home/ehchua/
 programming/cpp/gcc_make.html>`_.
 
-1. g++ command is used to compile source file. One could use commands 
-   in termianl as follow to generate executable file:
+1. g++ command is used to compile source file. 
+   One could use commands in termianl as follow to generate executable file:
    ::
 
         g++ -o hello hello.cpp

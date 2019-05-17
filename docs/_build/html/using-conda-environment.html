@@ -172,19 +172,20 @@ directory, and comment out “source” line that added by the Anaconda
 installer so that you won’t mess up anaconda python and OS python.
 See below section to check how to activate conda.</p>
 <p>Similar with python virtual environment, conda has its own
-environment. The detailed documentation could be found
-<a class="reference external" href="https://conda.io/docs/user-guide/tasks/manage-environments.html">conda.io</a>.</p>
+environment.
+The detailed documentation could be found <a class="reference external" href="https://conda.io/docs/user-guide/tasks/manage-environments.html">conda.io</a>.</p>
 <p>For this project, I created an environment called <strong>coding-learning-env</strong>.
 You can create the same environment by using the “conda-env.yml” file.</p>
 <div class="section" id="how-to-create-a-conda-env">
 <h2>8.0 How to create a conda env<a class="headerlink" href="#how-to-create-a-conda-env" title="Permalink to this headline">¶</a></h2>
-<p>The first thing first to learn is to create a conda environment. Creating
-a conda env is as easy as:</p>
+<p>The first thing first to learn is to create a conda environment.
+Creating a conda env is as easy as:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">my</span><span class="o">-</span><span class="n">conda</span><span class="o">-</span><span class="n">env</span>
 </pre></div>
 </div>
-<p>where the “my-conda-env” is the name of your environment. You can also
-specify the version of python you choose to use in that environment:</p>
+<p>where the “my-conda-env” is the name of your environment.
+You can also specify the version of python you choose to use in that
+environment:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">my</span><span class="o">-</span><span class="n">conda</span><span class="o">-</span><span class="n">env</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.6</span>
 </pre></div>
 </div>
@@ -205,7 +206,7 @@ already writen in your .bashrc file.</p>
 <div class="section" id="how-to-activate-conda-environment">
 <h2>8.2 How to activate conda environment<a class="headerlink" href="#how-to-activate-conda-environment" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>Activate conda</li>
+<li><p>Activate conda</p></li>
 </ol>
 <p>2. Use command in terminal as follow:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">activate</span> <span class="n">coding</span><span class="o">-</span><span class="n">learning</span><span class="o">-</span><span class="n">env</span>
@@ -217,8 +218,8 @@ already writen in your .bashrc file.</p>
 <p>When there is a yml file existed in the repo, and you want to create the
 same environment with same pacakges, you can follow steps below:</p>
 <ol class="arabic simple">
-<li>Activate conda</li>
-<li>Git clone the repo to local, then cd to that repo directory.</li>
+<li><p>Activate conda</p></li>
+<li><p>Git clone the repo to local, then cd to that repo directory.</p></li>
 </ol>
 <p>3. Use command in terminal as follow:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">-</span><span class="n">f</span> <span class="n">conda</span><span class="o">-</span><span class="n">env</span><span class="o">.</span><span class="n">yml</span>
@@ -236,7 +237,7 @@ same environment with same pacakges, you can follow steps below:</p>
 <div class="section" id="how-to-export-the-conda-environment-to-yml-file">
 <h2>8.5 How to export the conda environment to yml file<a class="headerlink" href="#how-to-export-the-conda-environment-to-yml-file" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>Activate the conda environment you want to export first.</li>
+<li><p>Activate the conda environment you want to export first.</p></li>
 </ol>
 <p>2. Use command in terminal as follow:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">export</span> <span class="o">&gt;</span> <span class="n">nameEnvironment</span><span class="o">.</span><span class="n">yml</span>
@@ -257,7 +258,7 @@ In this project case, we use</p>
 <div class="section" id="how-to-see-the-conda-environment-list">
 <h2>8.6 How to see the conda environment list<a class="headerlink" href="#how-to-see-the-conda-environment-list" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>Activate conda</li>
+<li><p>Activate conda</p></li>
 </ol>
 <p>2. Use command in terminal as follow:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="nb">list</span>
@@ -311,6 +312,7 @@ In this project case, we use</p>
         <script type="text/javascript" src="_static/jquery.js"></script>
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
     
 
   
