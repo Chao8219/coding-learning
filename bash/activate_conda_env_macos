@@ -1,0 +1,5 @@
+#!/bin/bash
+repo_loc="git-chao-repos/coding-learning"
+cd ~
+conda activate coding-learning-env
+cd ${repo_loc}

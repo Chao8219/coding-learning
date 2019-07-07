@@ -1,0 +1,7 @@
+#!/bin/bash
+conda_env_loc="git-chao-repos/coding-learning/conda_env/macOS_x64/"
+cd ~
+conda activate coding-learning-env
+cd ${conda_env_loc}
+conda env export > conda-env.yml
+conda env export --no-builds > conda-no-builds-env.yml

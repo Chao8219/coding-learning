@@ -1,0 +1,8 @@
+#!/bin/bash
+conda_env="anaconda3/bin/activate coding-learning-env"
+conda_env_loc="git-chao-repos/coding-learning/conda_env/ubuntu_x64/"
+cd ~
+source ${conda_env}
+cd ${conda_env_loc}
+conda env export > conda-env.yml
+conda env export --no-builds > conda-no-builds-env.yml
