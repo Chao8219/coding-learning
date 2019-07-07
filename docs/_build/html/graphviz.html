@@ -17,34 +17,36 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="8 Using Conda Environment" href="using-conda-environment.html" />
     <link rel="prev" title="6 Git" href="git.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -88,7 +90,11 @@
 <li class="toctree-l1"><a class="reference internal" href="git.html">6 Git</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">7 Graphviz</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#dot-language">7.1 DOT Language</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#python">7.2 Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python">7.2 Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#using-graphviz-on-windows">7.2.1 Using Graphviz on Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-flowchart-by-python-script">7.2.2 Creating Flowchart by Python Script</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="using-conda-environment.html">8 Using Conda Environment</a></li>
@@ -179,9 +185,68 @@ the code, and generate the format you want by command in terminal:</p>
 <div class="section" id="python">
 <h2>7.2 Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
 <p>You can also use python to generate dot file.
-See <a class="reference external" href="https://pypi.org/project/graphviz/">here</a> to see how to use it.</p>
-<p>You can use anaconda to run the script.
-Please notice that the graphviz is installed under pip, not conda.</p>
+See <a class="reference external" href="https://pypi.org/project/graphviz/">pypi graphviz</a> for more help.</p>
+<div class="section" id="using-graphviz-on-windows">
+<h3>7.2.1 Using Graphviz on Windows<a class="headerlink" href="#using-graphviz-on-windows" title="Permalink to this headline">¶</a></h3>
+<p>This is a special note for using Graphviz on Windows.
+For me, using graphviz on Ubuntu is relatively easy since all I did was
+to install graphviz package inside the conda env.
+It becomes a little bit different while I am using Win 10 for this repo.
+So here are some tips for myself in case I need to do this again.</p>
+<ol class="arabic simple">
+<li><p><code class="code docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">python-graphviz</span></code></p></li>
+<li><p><code class="code docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">graphviz</span></code></p></li>
+<li><p>“Control Panel” -&gt; “System and Security” -&gt; “System” -&gt;
+“Advanced System Setting” -&gt; “Environment Variables” -&gt;
+Edit “Path” under “System variables” -&gt; add new path
+“C:Usersthe_path_to_Anaconda3envsmy_envLibrarybin
+graphviz”</p></li>
+</ol>
+<p>After adding path up, please re-open terminals. This is very important.</p>
+</div>
+<div class="section" id="creating-flowchart-by-python-script">
+<h3>7.2.2 Creating Flowchart by Python Script<a class="headerlink" href="#creating-flowchart-by-python-script" title="Permalink to this headline">¶</a></h3>
+<p>One could write a simple example in python as follow:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">graphviz</span> <span class="k">import</span> <span class="n">Digraph</span>
+<span class="n">dot</span> <span class="o">=</span> <span class="n">Digraph</span><span class="p">(</span><span class="s1">&#39;graphviz_example_2&#39;</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;graphviz_example_2&#39;</span><span class="p">)</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">attr</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;A Simple Example</span><span class="se">\n</span><span class="s1">by Chao&#39;</span><span class="p">,</span> <span class="n">splines</span><span class="o">=</span><span class="s1">&#39;ortho&#39;</span><span class="p">)</span>
+
+<span class="c1"># oval shape for start and end</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">attr</span><span class="p">(</span><span class="s1">&#39;node&#39;</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="s1">&#39;oval&#39;</span><span class="p">)</span>
+<span class="c1"># first argument is label, second argument is text on the node</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;start&#39;</span><span class="p">,</span> <span class="s1">&#39;New Adventure&#39;</span><span class="p">)</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;end&#39;</span><span class="p">,</span> <span class="s1">&#39;The End&#39;</span><span class="p">)</span>
+
+<span class="c1"># solid box for action</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">attr</span><span class="p">(</span><span class="s1">&#39;node&#39;</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="s1">&#39;box&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;solid&#39;</span><span class="p">)</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;mug&#39;</span><span class="p">,</span> <span class="s1">&#39;A mug is placed</span><span class="se">\n</span><span class="s1">in front of you.&#39;</span><span class="p">)</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;iced coffee&#39;</span><span class="p">,</span> <span class="s1">&#39;Iced Coffee&#39;</span><span class="p">)</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;hot coffee&#39;</span><span class="p">,</span> <span class="s1">&#39;Hot Coffee&#39;</span><span class="p">)</span>
+
+<span class="c1"># dotted box for thoughts or other stuff</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">attr</span><span class="p">(</span><span class="s1">&#39;node&#39;</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="s1">&#39;box&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;dotted&#39;</span><span class="p">)</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;nice choice&#39;</span><span class="p">,</span> <span class="s1">&#39;Nice choice&#39;</span><span class="p">)</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;good taste&#39;</span><span class="p">,</span> <span class="s1">&#39;Good taste&#39;</span><span class="p">)</span>
+
+<span class="c1"># diamond shape for decisions</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">attr</span><span class="p">(</span><span class="s1">&#39;node&#39;</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="s1">&#39;diamond&#39;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;solid&#39;</span><span class="p">)</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">node</span><span class="p">(</span><span class="s1">&#39;inside&#39;</span><span class="p">,</span> <span class="s1">&#39;What do you want to drink?&#39;</span><span class="p">)</span>
+
+<span class="n">dot</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="s1">&#39;start&#39;</span><span class="p">,</span> <span class="s1">&#39;mug&#39;</span><span class="p">)</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="s1">&#39;mug&#39;</span><span class="p">,</span> <span class="s1">&#39;inside&#39;</span><span class="p">)</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="s1">&#39;inside&#39;</span><span class="p">,</span> <span class="s1">&#39;iced coffee&#39;</span><span class="p">)</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="s1">&#39;inside&#39;</span><span class="p">,</span> <span class="s1">&#39;hot coffee&#39;</span><span class="p">)</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="s1">&#39;iced coffee&#39;</span><span class="p">,</span> <span class="s1">&#39;nice choice&#39;</span><span class="p">)</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="s1">&#39;hot coffee&#39;</span><span class="p">,</span> <span class="s1">&#39;good taste&#39;</span><span class="p">)</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="s1">&#39;nice choice&#39;</span><span class="p">,</span> <span class="s1">&#39;end&#39;</span><span class="p">)</span>
+<span class="n">dot</span><span class="o">.</span><span class="n">edge</span><span class="p">(</span><span class="s1">&#39;good taste&#39;</span><span class="p">,</span> <span class="s1">&#39;end&#39;</span><span class="p">)</span>
+
+<span class="n">dot</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Once the script is created, one could simply run:
+<code class="code docutils literal notranslate"><span class="pre">python</span> <span class="pre">your_flowchart.py</span></code>, then the pdf file will be generated.</p>
+</div>
 </div>
 </div>
 
@@ -196,7 +261,7 @@ Please notice that the graphviz is installed under pip, not conda.</p>
         <a href="using-conda-environment.html" class="btn btn-neutral float-right" title="8 Using Conda Environment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="git.html" class="btn btn-neutral" title="6 Git" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="git.html" class="btn btn-neutral float-left" title="6 Git" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -222,26 +287,16 @@ Please notice that the graphviz is installed under pip, not conda.</p>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

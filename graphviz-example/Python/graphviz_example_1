@@ -1,4 +1,4 @@
-digraph {
+digraph graphviz_example_1 {
 	node [shape=box style=rounded]
 	start [label=Start]
 	end [label=End]

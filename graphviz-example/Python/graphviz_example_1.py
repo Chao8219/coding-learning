@@ -1,6 +1,6 @@
 from graphviz import Digraph
 
-dot = Digraph()
+dot = Digraph('graphviz_example_1', filename='graphviz_example_1')
 
 dot.attr('node', shape='box', style='rounded')
 dot.node('start', 'Start')

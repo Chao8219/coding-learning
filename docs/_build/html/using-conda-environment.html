@@ -17,34 +17,36 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="9 Documentation by Sphinx" href="documentation-by-sphinx.html" />
     <link rel="prev" title="7 Graphviz" href="graphviz.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -166,7 +168,7 @@
 <h1>8 Using Conda Environment<a class="headerlink" href="#using-conda-environment" title="Permalink to this headline">¶</a></h1>
 <p>Note: this page is moved from my <strong>ml-101</strong> repo directly.</p>
 <p>This doc is for Ubuntu/Linux only, for now.</p>
-<p>One could install conda <a class="reference external" href="https://www.anaconda.com/">here</a>.
+<p>One could install conda at <a class="reference external" href="https://www.anaconda.com/">anaconda.com</a>.
 Once finished installation, you can edit .bashrc file in your home
 directory, and comment out “source” line that added by the Anaconda
 installer so that you won’t mess up anaconda python and OS python.
@@ -196,22 +198,21 @@ environment:</p>
 </div>
 <div class="section" id="how-to-activate-conda">
 <h2>8.1 How to activate conda<a class="headerlink" href="#how-to-activate-conda" title="Permalink to this headline">¶</a></h2>
-<p>1. Use command in terminal as follow:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">anaconda3</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
-</pre></div>
-</div>
+<ol class="arabic">
+<li><p>Use command in terminal as follow:
+<code class="code docutils literal notranslate"><span class="pre">source</span> <span class="pre">anaconda3/bin/activate</span></code></p>
 <p>Please notice that you do not need to activate conda if the activation is
 already writen in your .bashrc file.</p>
+</li>
+</ol>
 </div>
 <div class="section" id="how-to-activate-conda-environment">
 <h2>8.2 How to activate conda environment<a class="headerlink" href="#how-to-activate-conda-environment" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
 <li><p>Activate conda</p></li>
+<li><p>Use command in terminal as follow:
+<code class="code docutils literal notranslate"><span class="pre">source</span> <span class="pre">activate</span> <span class="pre">coding-learning-env</span></code></p></li>
 </ol>
-<p>2. Use command in terminal as follow:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">activate</span> <span class="n">coding</span><span class="o">-</span><span class="n">learning</span><span class="o">-</span><span class="n">env</span>
-</pre></div>
-</div>
 </div>
 <div class="section" id="how-to-create-the-same-environment">
 <h2>8.3 How to create the same environment<a class="headerlink" href="#how-to-create-the-same-environment" title="Permalink to this headline">¶</a></h2>
@@ -220,50 +221,40 @@ same environment with same pacakges, you can follow steps below:</p>
 <ol class="arabic simple">
 <li><p>Activate conda</p></li>
 <li><p>Git clone the repo to local, then cd to that repo directory.</p></li>
+<li><p>Use command in terminal as follow:
+<code class="code docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">create</span> <span class="pre">-f</span> <span class="pre">conda-env.yml</span></code></p></li>
 </ol>
-<p>3. Use command in terminal as follow:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">-</span><span class="n">f</span> <span class="n">conda</span><span class="o">-</span><span class="n">env</span><span class="o">.</span><span class="n">yml</span>
-</pre></div>
-</div>
 </div>
 <div class="section" id="how-to-exit-current-environment">
 <h2>8.4 How to exit current environment<a class="headerlink" href="#how-to-exit-current-environment" title="Permalink to this headline">¶</a></h2>
-<p>1. Use command in terminal as follow:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">deactivate</span>
-</pre></div>
-</div>
+<ol class="arabic">
+<li><p>Use command in terminal as follow: <code class="code docutils literal notranslate"><span class="pre">source</span> <span class="pre">deactivate</span></code></p>
 <p>Plus, this works for both leaving conda and conda environment.</p>
+</li>
+</ol>
 </div>
 <div class="section" id="how-to-export-the-conda-environment-to-yml-file">
 <h2>8.5 How to export the conda environment to yml file<a class="headerlink" href="#how-to-export-the-conda-environment-to-yml-file" title="Permalink to this headline">¶</a></h2>
-<ol class="arabic simple">
+<ol class="arabic">
 <li><p>Activate the conda environment you want to export first.</p></li>
-</ol>
-<p>2. Use command in terminal as follow:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">export</span> <span class="o">&gt;</span> <span class="n">nameEnvironment</span><span class="o">.</span><span class="n">yml</span>
-</pre></div>
-</div>
-<p>where nameEnvironment is the yml file name.
-In this project case, we use</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">export</span> <span class="o">&gt;</span> <span class="n">conda</span><span class="o">-</span><span class="n">env</span><span class="o">.</span><span class="n">yml</span>
-</pre></div>
-</div>
+<li><p>Use command in terminal as follow:
+<code class="code docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">export</span> <span class="pre">&gt;</span> <span class="pre">nameEnvironment.yml</span></code>,
+where nameEnvironment is the yml file name.</p>
+<p>In this project case, we use <code class="code docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">export</span> <span class="pre">&gt;</span> <span class="pre">conda-env.yml</span></code></p>
 <p>Plus, this is how you can update the conda environment.</p>
-<p>3. To obtain no-builds list, one could use</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">export</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">builds</span> <span class="o">&gt;</span> <span class="n">conda</span><span class="o">-</span><span class="n">no</span><span class="o">-</span><span class="n">builds</span><span class="o">-</span><span class="n">env</span><span class="o">.</span><span class="n">yml</span>
-</pre></div>
-</div>
+</li>
+<li><p>To obtain no-builds list, one could use
+<code class="code docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">export</span> <span class="pre">--no-builds</span> <span class="pre">&gt;</span> <span class="pre">conda-no-builds-env.yml</span></code></p>
 <p>The no-builds list is for cross-platform.</p>
+</li>
+</ol>
 </div>
 <div class="section" id="how-to-see-the-conda-environment-list">
 <h2>8.6 How to see the conda environment list<a class="headerlink" href="#how-to-see-the-conda-environment-list" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
 <li><p>Activate conda</p></li>
+<li><p>Use command in terminal as follow: <code class="code docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">list</span></code></p></li>
 </ol>
-<p>2. Use command in terminal as follow:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="nb">list</span>
-</pre></div>
-</div>
 </div>
 </div>
 
@@ -278,7 +269,7 @@ In this project case, we use</p>
         <a href="documentation-by-sphinx.html" class="btn btn-neutral float-right" title="9 Documentation by Sphinx" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="graphviz.html" class="btn btn-neutral" title="7 Graphviz" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="graphviz.html" class="btn btn-neutral float-left" title="7 Graphviz" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -304,26 +295,16 @@ In this project case, we use</p>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

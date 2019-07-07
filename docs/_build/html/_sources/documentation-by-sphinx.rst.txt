@@ -104,3 +104,26 @@ Please be patient.
 
 Note: You can find more usage on this page of `quickstart <http://
 www.sphinx-doc.org/en/master/usage/quickstart.html>`_.
+
+9.5 Tips for RST Syntax
+=======================
+
+The rst syntax is similar to markdown, but with some difference. 
+Here are some tips that might be helpful.
+
+9.5.1 Use Cheat Sheet
+---------------------
+
+To avoid redundant documentation, one could find all the basic usage in 
+this `Rst Cheat Sheet <https://thomas-cokelaer.info/tutorials/sphinx/
+rest_syntax.html#id4>`_.
+
+9.5.2 Inline Code
+-----------------
+
+Try this to obtain inline code render:
+::
+
+  :code:`git push`
+
+The result would be like: :code:`git push`.

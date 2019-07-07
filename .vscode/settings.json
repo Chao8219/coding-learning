@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "/home/zichao/anaconda3/envs/coding-learning-env/bin/python",
+    "python.pythonPath": "/Users/chao/anaconda3/envs/coding-learning-env/bin/python",
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true
 }

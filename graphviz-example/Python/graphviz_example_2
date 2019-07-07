@@ -1,0 +1,25 @@
+digraph graphviz_example_2 {
+	label="A Simple Example
+by Chao" splines=ortho
+	node [shape=oval]
+	start [label="New Adventure"]
+	end [label="The End"]
+	node [shape=box style=solid]
+	mug [label="A mug is placed
+in front of you."]
+	"iced coffee" [label="Iced Coffee"]
+	"hot coffee" [label="Hot Coffee"]
+	node [shape=box style=dotted]
+	"nice choice" [label="Nice choice"]
+	"good taste" [label="Good taste"]
+	node [shape=diamond style=solid]
+	inside [label="What do you want to drink?"]
+	start -> mug
+	mug -> inside
+	inside -> "iced coffee"
+	inside -> "hot coffee"
+	"iced coffee" -> "nice choice"
+	"hot coffee" -> "good taste"
+	"nice choice" -> end
+	"good taste" -> end
+}
